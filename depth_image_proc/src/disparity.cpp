@@ -105,7 +105,7 @@ DisparityNode::DisparityNode()
   // pub_disparity_ =
   //   left_nh.advertise<stereo_msgs::DisparityImage>("disparity", 1, connect_cb, connect_cb);
   pub_disparity_ = create_publisher<stereo_msgs::msg::DisparityImage>(
-    "left/disparity", rclcpp::SensorDataQoS());
+    "left/disparity", rclcpp::SystemDefaultsQoS());
 }
 
 // Handles (un)subscribing when clients (un)subscribe

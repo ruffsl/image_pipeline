@@ -175,7 +175,7 @@ PointCloudXyziRadialNode::PointCloudXyziRadialNode()
   // TODO(ros2) Implement when SubscriberStatusCallback is available
   // pub_point_cloud_ = nh.advertise<PointCloud>("points", 20, connect_cb, connect_cb);
   pub_point_cloud_ = create_publisher<sensor_msgs::msg::PointCloud2>(
-    "points", rclcpp::SensorDataQoS());
+    "points", rclcpp::SystemDefaultsQoS());
 }
 
 // Handles (un)subscribing when clients (un)subscribe
